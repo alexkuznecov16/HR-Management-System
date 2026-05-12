@@ -1,0 +1,53 @@
+/* /components/Error.module.scss */
+
+.error-container {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background: #dc2626;
+	color: white;
+	padding: 12px 16px;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	z-index: 9999;
+	min-width: 220px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+
+	overflow: hidden;
+}
+
+.message {
+	flex: 1;
+}
+
+.closeBtn {
+	background: transparent;
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	background: rgba(255, 255, 255, 0.8);
+	animation: shrink 3s linear forwards;
+	width: 100%;
+}
+
+@keyframes shrink {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0%;
+	}
+}
